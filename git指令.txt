@@ -16,3 +16,10 @@
 		git rm 文件名 : 从版本库删除文件，后面还要提交一次更新版本库
 		
 		ssh-keygen -t rsa -C "邮箱地址" : 创建SSH Key 
+		
+		git remote add origin git@server-name:path/repo-name.git	 : 	关联一个远程仓库 oringin是远程仓库的名字（默认）
+		
+		git push -u origin master : 	 关联到远程仓库后第一次推送master分支的所有内容
+		如果推送不成功 在这条指令后面加上 -f 强制推送
+		
+		git push origin master :  第一次推送后就不需要再添加-u指令来推送内容到远程仓库了
