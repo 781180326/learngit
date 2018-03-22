@@ -1,0 +1,18 @@
+		git init : 在当前文件夹创建git仓库
+		git config --global user.name "your name" : 设置全局用户名
+		git config --global user.email "your email" : 设置全局邮箱
+		git add 文件名 : 将文件添加到暂存区
+		git commit -m "本次提交简介" : 将暂存区的文件提交到git仓库
+		git status : 查看当前仓库的状态
+		git diff [ 文件名 ] : 查看文件上次的修改内容（没有暂存）
+		git log : 显示从最近到最远的提交日志
+		git log --pretty=oneline : 将提交日志简化显示为一行
+		git reset --hard HEAD^ : 将当前版本回退到上一个版本						（回退版本）
+		git reset --hard commit id : 将版本回退到commit id的版本
+		git reflog : 从近到远显示操作命令历史
+		git diff HEAD -- 文件名 : 查看工作区和版本库里面最新版本的区别
+		git checkout -- 文件名 : 撤销文件在工作区或暂存区的修改，包括删除 		（撤销修改）
+		git reset HEAD 文件名: 把暂存区的修改回退到工作区						（撤回暂存）
+		git rm 文件名 : 从版本库删除文件，后面还要提交一次更新版本库
+		
+		ssh-keygen -t rsa -C "邮箱地址" : 创建SSH Key 
