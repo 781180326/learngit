@@ -1,3 +1,4 @@
+改动第一次：
 		git init : 在当前文件夹创建git仓库
 		git config --global user.name "your name" : 设置全局用户名
 		git config --global user.email "your email" : 设置全局邮箱
