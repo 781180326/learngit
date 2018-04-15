@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>临潼区旅游资源网</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/special.css">
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/header.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			var selectUl = $('.selectUl'),
+				selectLi = selectUl.children('li'),
+				selectBox = $('.selectBox'),
+				selectCard = selectBox.children('.selectCard');
+			selectLi.click(function( event ){
+				selectLi.removeClass('active');
+				selectCard.removeClass('active');
+				$(this).addClass('active');
+				selectCard.eq(selectLi.index(this)).addClass('active');
+
+				//alert($(this).children('a').eq(0).data('type'));
+				 // $.get('localhost:80/special.php',{type:$(this).children('a').eq(0).data('type')}).success(function(data){
+
+				 // }).error(function(){
+
+				 // });
+				event.preventDefault();
+				return false;
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<!-- header start -->
+	<div class="header linear-blue shadow radiu">
+		<div class="wrap">
+			<div class="clearfix head">
+				<div class="fl logo">
+					<img src="http://www.placehold.it/50x50" alt="" class="fl">
+					<div class="fl">
+						<h1>临潼区旅游资源网</h1>
+						<p>西安·临潼欢迎您！</p>
+					</div>
+				</div>
+				<div class="fr jq-qh">
+					<ul class="fr jq-city"><li>7℃~27℃ 临潼区</li></ul>
+					<div class="fr jq-ssd">
+						<ul>
+							<li><span>骊山风景区：舒适</span></li>
+							<li><span>秦始皇兵马俑：舒适</span></li>
+							<li><span>世界八大奇迹馆：舒适</span></li>
+							<li><span>华清池：舒适</span></li>
+						</ul>
+					</div>
+					<label class="fr">景区舒适度：</label>
+				</div>
+			</div>
+		</div>
+		<div class="wrap-flus">
+			<div class="clearfix wrap">
+				<ul class="nav" id="nav">
+					<li>
+						<a href="./index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="./general.html#LTintro">临潼概况</a>
+						<div class="subnav">
+							<ul>
+								<li><span>临潼概况</span></li>
+								<li><a href="./general.html#geograph">地理环境</a></li>
+								<li><a href="./general.html#climate">临潼气候</a></li>
+								<li><a href="./general.html#regional">区域规划</a></li>
+								<li><a href="./general.html#culture">历史文化</a></li>
+								<li><a href="./general.html#speciality">地方特产</a></li>
+								<li><a href="./general.html#traffic">交通运输</a></li>
+								<li><a href="./general.html#scenery">风景名胜</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="">畅游临潼</a>
+						<div class="subnav">
+							<ul>
+								<li><span>景区推荐</span></li>
+								<li><a href="">兵马俑</a></li>
+								<li><a href="">华清池</a></li>
+								<li><a href="">八大奇迹馆</a></li>
+								<li><a href="">骊山国家森林公园</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="">旅游攻略</a>
+						<div class="subnav">
+							<div>
+								<a href="" class="cycs">餐饮场所</a>
+								<a href="" class="yjzs">宜居住宿</a>
+								<a href="" class="xxyl">休闲娱乐</a>
+								<a href="" class="tsly">特色旅游</a>
+								<a href="" class="tsgw">特色购物</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="">一日游</a>
+					</li>
+					<li>
+						<a href="">旅游帮助</a>
+						<div class="subnav">
+							<ul><li><a href="">查询地图</a></li></ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+
+	<!-- 专题旅游 start -->
+	<div class="wrap">
+		<div id="special" class="clearfix shadow linear-white">
+			<div class="fl aside imgBorder">
+				<h2>专题旅游</h2>
+				<ul class="selectUl">
+					<li class="active"><a href="#" data-type="history">历史文化</a></li>
+					<li><a href="#" data-type="leisure">休闲度假</a></li>
+					<li><a href="#" data-type="geology">地质探索</a></li>
+					<li><a href="#" data-type="humanity">人文艺术</a></li>
+					<li><a href="#" data-type="redCulture">红色文化</a></li>
+					<li><a href="#" data-type="natural">自然风光</a></li>
+				</ul>
+			</div>
+			<div class="fr main imgBorder selectBox">
+				<div class="selectCard active">
+					<h1>历史文化</h1>
+					<div class="intro">loading...</div>
+					<ul class="list clearfix">
+						<li>
+							<a href="./scenic.html?id=1" class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span><span>兵马俑</span></p>
+								<p><span>介绍:</span><span>兵马俑介绍</span></p>
+							</a>
+						</li>
+						<li>
+							<a href="./scenic.html?id=1" class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span><span>兵马俑</span></p>
+								<p><span>介绍:</span><span>兵马俑介绍</span></p>
+							</a>
+						</li>
+						<li>
+							<a href="./scenic.html?id=1" class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span><span>兵马俑</span></p>
+								<p><span>介绍:</span><span>兵马俑介绍</span></p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="selectCard">
+					<h1>休闲度假</h1>
+					<div class="intro"></div>
+					<ul class="list clearfix">
+						<li>
+							<a href="./scenic.html?id=1" class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span>兵马俑</p>
+								<p><span>介绍:</span>兵马俑介绍</p>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="selectCard">
+					<h1>地质探索</h1>
+					<div class="intro"></div>
+					<ul class="list clearfix">
+						<li>
+							<a href="./scenic.html?id=1" class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span>兵马俑</p>
+								<p><span>介绍:</span>兵马俑介绍</p>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="selectCard">
+					<h1>人文艺术</h1>
+					<div class="intro"></div>
+					<ul class="list clearfix">
+						<li>
+							<a href="./scenic.html?id=1" class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span>兵马俑</p>
+								<p><span>介绍:</span>兵马俑介绍</p>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="selectCard">
+					<h1>红色文化</h1>
+					<div class="intro"></div>
+					<ul class="list clearfix">
+						<li>
+							<a href="./scenic.html?id=1" class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span>兵马俑</p>
+								<p><span>介绍:</span>兵马俑介绍</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="selectCard">
+					<h1>自然风光</h1>
+					<div class="intro"></div>
+					<ul class="list clearfix">
+						<li>
+							<a class="imgBorder">
+								<img src="http://placehold.it/300x300" alt="">
+								<p><span>名称:</span>兵马俑</p>
+								<p><span>介绍:</span>兵马俑介绍</p>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 专题旅游 end -->
+
+	<!-- footer start -->
+	<div class="linear-blue shadow radiu">
+		<div class="wrap">
+			<div class="footer">
+				<address>西安科技大学实验站点&nbsp;&nbsp;作者：<em>bwhite</em></address>
+			</div>
+		</div>
+	</div>
+	<!-- footer end -->
+</body>
+</html>
